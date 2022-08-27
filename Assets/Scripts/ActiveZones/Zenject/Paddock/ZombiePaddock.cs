@@ -27,5 +27,7 @@ public class ZombiePaddock
             throw new InvalidOperationException("Paddock is not ready");
 
         _currentStep = 0;
+
+        ProgressNormalized?.Invoke((float)_currentStep / _maxStep);
     }
 }
