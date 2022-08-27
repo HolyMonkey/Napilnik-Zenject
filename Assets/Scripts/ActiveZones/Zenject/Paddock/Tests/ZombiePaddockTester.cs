@@ -26,9 +26,9 @@ public class ZombiePaddockTester : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.T))
         {
             if (_activator.Active)
-                _activator.OnEnter();
-            else
                 _activator.OnExit();
+            else
+                _activator.OnEnter();
         }
     }
 }

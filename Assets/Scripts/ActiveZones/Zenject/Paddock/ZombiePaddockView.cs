@@ -30,7 +30,10 @@ public class ZombiePaddockView : MonoBehaviour
     private void ShowProgress(float normalized) 
     {
         if (normalized == 0 && _view != null)
+        {
             Destroy(_view);
+            return;
+        }
 
         int targetView = (int)Mathf.Lerp(0, _zombiesViews.Count, normalized) - 1;
 

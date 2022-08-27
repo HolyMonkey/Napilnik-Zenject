@@ -14,6 +14,6 @@ public class PaddockTestSceneInstaller : MonoInstaller
 
         Container.Bind<ZombiePaddock>().FromComponentOn(_paddock.gameObject).AsSingle();
 
-        Container.Bind<ZombiePaddockActivatingByTimer>().FromInstance(_activator);
+        Container.Bind<ZombiePaddockActivatingByTimer>().FromInstance(_activator).AsSingle();
     }
 }

@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using Zenject;
 
@@ -5,9 +6,10 @@ public class ZombiePaddockActivatingByTimer : MonoBehaviour
 {
     private ZombiePaddock _target;
     private float _timer;
-    private float _tickCooldown;
+    private float _tickCooldown = 1;
 
     public bool Active { get; private set; }
+    public event Action<bool> Toogle;
 
     [Inject]
     private void Contrstructor(ZombiePaddock target)
@@ -27,14 +29,23 @@ public class ZombiePaddockActivatingByTimer : MonoBehaviour
             }
         }
     }
+
     public void OnEnter()
     {
-        Active = false;
+        if (Active) 
+            return;
+        
+        Active = true;
+        Toogle?.Invoke(true);
     }
 
     public void OnExit()
     {
+        if (Active == false)
+            return;
+
         Active = false;
+        Toogle?.Invoke(false);
     }
 
     private void Activate()

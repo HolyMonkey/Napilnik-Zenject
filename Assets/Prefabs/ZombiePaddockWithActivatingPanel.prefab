@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 76063748}
   - component: {fileID: 76063747}
   - component: {fileID: 76063746}
-  - component: {fileID: 76063745}
+  - component: {fileID: 1134410984235969478}
   m_Layer: 0
   m_Name: Visual
   m_TagString: Untagged
@@ -96,7 +96,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &76063745
+--- !u!114 &1134410984235969478
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 76063744}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 524e2105942b2034e8f8e5798cf36a3a, type: 3}
+  m_Script: {fileID: 11500000, guid: 762455b32a1df534b81aa09e02f29444, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &219914147153217229
@@ -117,6 +117,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4227465649202890025}
+  - component: {fileID: 1732279186}
+  - component: {fileID: 8814428863026956799}
   m_Layer: 0
   m_Name: ZombiePaddockWithActivatingPanel
   m_TagString: Untagged
@@ -140,6 +142,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1732279186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219914147153217229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08eca9f7688a0a24685b89133b020c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: 8814428863026956799}
+  _installerPrefabs: []
+  _autoRun: 1
+  _kernel: {fileID: 0}
+--- !u!114 &8814428863026956799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 219914147153217229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4921f73f41baa54aaa9ae8e94e389f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _zombiesView:
+  - {fileID: 171276, guid: 03a8f8655e4bde44cac8211dbe1a2a4f, type: 3}
+  - {fileID: 145692, guid: e9a745fd008e71b4ebdce32f62675e4d, type: 3}
+  - {fileID: 104058, guid: d762e249fbea44b4c8b4b76ceed6f626, type: 3}
+  _activator: {fileID: 303966958}
 --- !u!1 &7583795031487054274
 GameObject:
   m_ObjectHideFlags: 0
@@ -179,8 +216,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7583795032455054013}
-  - component: {fileID: 7583795032455053986}
-  - component: {fileID: 7583795032455053987}
   - component: {fileID: 7583795032455054012}
   - component: {fileID: 7583795032455054015}
   m_Layer: 0
@@ -206,40 +241,6 @@ Transform:
   m_Father: {fileID: 4227465649202890025}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7583795032455053986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7583795032455053984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 08eca9f7688a0a24685b89133b020c8e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _scriptableObjectInstallers: []
-  _monoInstallers:
-  - {fileID: 7583795032455053987}
-  _installerPrefabs: []
-  _autoRun: 1
-  _kernel: {fileID: 0}
---- !u!114 &7583795032455053987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7583795032455053984}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4921f73f41baa54aaa9ae8e94e389f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _zombiesView:
-  - {fileID: 171276, guid: 03a8f8655e4bde44cac8211dbe1a2a4f, type: 3}
-  - {fileID: 145692, guid: e9a745fd008e71b4ebdce32f62675e4d, type: 3}
-  - {fileID: 104058, guid: d762e249fbea44b4c8b4b76ceed6f626, type: 3}
 --- !u!114 &7583795032455054012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -273,6 +274,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7583795033414797088}
+  - component: {fileID: 303966958}
   m_Layer: 0
   m_Name: ActivatingPanel
   m_TagString: Untagged
@@ -295,6 +297,18 @@ Transform:
   m_Father: {fileID: 4227465649202890025}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &303966958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7583795033414797089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 524e2105942b2034e8f8e5798cf36a3a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7583795031847290319
 PrefabInstance:
   m_ObjectHideFlags: 0
