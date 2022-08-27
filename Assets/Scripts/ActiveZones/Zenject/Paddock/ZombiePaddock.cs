@@ -1,8 +1,8 @@
 using System;
 using UnityEngine;
-using UnityEngine.UI;
+using Zenject;
 
-public class ZombiePaddock
+public class ZombiePaddock : MonoBehaviour
 {
     private int _currentStep = 0;
     private int _maxStep = 3;
@@ -29,5 +29,9 @@ public class ZombiePaddock
         _currentStep = 0;
 
         ProgressNormalized?.Invoke((float)_currentStep / _maxStep);
+    }
+
+    public class Factory : PlaceholderFactory<ZombiePaddock>
+    {
     }
 }

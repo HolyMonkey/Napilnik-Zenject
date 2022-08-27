@@ -8,7 +8,7 @@ public class ZombiePaddockInstaller : MonoInstaller
 
     public override void InstallBindings()
     {
-        Container.Bind<ZombiePaddock>().AsSingle();
         Container.Bind<List<GameObject>>().FromInstance(_zombiesView);
+        Container.Bind<ZombiePaddock>().FromComponentOn(gameObject).AsSingle();
     }
 }
